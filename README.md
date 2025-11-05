@@ -18,7 +18,7 @@ This project demonstrates how to containerize a Python Flask application, manage
 
 ## 🧱 Project Structure
 
-```sh
+```bash
 ├── app.py 
 ├── requirements.txt 
 ├── Dockerfile 
@@ -30,8 +30,8 @@ This project demonstrates how to containerize a Python Flask application, manage
 │ ├── home.html 
 │ └── health.html 
 └── .github/ 
-    └── workflows/ 
-        └── ci.yml
+  └── workflows/ 
+     └── ci.yml
 ```
 
 ---
