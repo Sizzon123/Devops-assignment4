@@ -1,0 +1,21 @@
+name: Build and Run Flask App
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Create .env file from secrets
+      run: |
+        echo "APP_MESSAGE=${{ secrets.APP_MESSAGE }}" >> .env
+        echo "APP_HEALTH=${{ secrets.APP_HEALTH }}" >> .env
+
+    - name: Debug .env
+      run: cat .env
+
+    - name: Build and run container
+      run: docker-compose up --build -d
